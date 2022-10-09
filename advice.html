@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<head>
+<title>Совет</title>
+<meta name="Description" content="Совет поможет сделать выбор и принять правильное решение."/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(86631328, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/86631328" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+ 
+<style>
+
+/* Изображение на всю страницу */
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* Используемое изображение */
+  background-image: url("//daralt.ru/shangri-la.jpg");
+
+  /* Полная высота */
+  height: 100%; 
+
+  /* Центр и масштаб изображения */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Текст на изображении */
+ 
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  color: white;
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  color: white;
+}
+
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  color: white;
+}
+
+/* Светящийся текст */
+body {
+  background-color: black;
+  font-family: cursive;
+}
+
+.glow {
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+/* круглые кнопки */ 
+
+.button {
+  background-color: #e60073;
+  border: 1px solid #ddd;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 50%;
+}
+ 
+</style>
+</head>
+
+<body> 
+
+<div class="bg"> 
+ 
+  <div class="top-right">
+    <button class="button" id="next-quote">жми</button>
+  </div>    
+  
+  <div class="top-left">
+    <button class="button"><a href="//daralt.ru/">домой</a></button>
+  </div>
+    
+  <div id="random-phrase">
+    <br><br>  
+    <br><br> 
+    <br><br>
+    <div id="phrase" class="glow"></div>
+  </div>
+ 
+</div>  
+
+<script>
+var quotes = [
+    [
+        "Ненависть – удел побежденных.",
+    ],
+ 
+    [
+        "Если вы хотите успеха, а готовитесь к поражению, то вы получите как раз то, к чему готовитесь.",
+    ],
+
+    [
+        "Стремитесь не к успеху, а к ценностям, которые он дает.",
+    ],
+    
+    [
+        "Мы – рабы своих привычек. измени свои привычки, изменится твоя жизнь.",
+    ],
+    
+    [
+        "Сложнее всего начать действовать, все остальное зависит только от упорства.",
+    ],
+    
+    [
+        "Надо любить жизнь больше, чем смысл жизни.",
+    ],
+    
+    [
+        "Жизнь - это то, что с тобой происходит, пока ты строишь планы.",
+    ],
+    
+    [
+        "Вы никогда не пересечете океан, если не наберетесь мужества потерять берег из виду.",
+    ],
+    
+    [
+        "Есть только один способ избежать критики: ничего не делайте, ничего не говорите и будьте никем.",
+    ],
+    
+    [
+        "Успех — это способность идти от поражения к поражению, не теряя оптимизма.",
+    ],
+    
+    [
+        "Я лучше умру от страсти, чем от скуки.",
+    ],
+    
+];
+
+document.getElementById("next-quote").addEventListener("click", function() {
+   
+    // выбираем случайную фразу из массива
+    // данные в массив могут попадать и через api
+    var quote = quotes[ Math.floor( Math.random() * quotes.length ) ];
+
+    // цитата
+    var phrase = document.querySelector("#phrase");
+   
+
+    phrase.innerHTML = quote[0];
+   
+});
+</script> 
+ 
+</body>
+
+</html>
