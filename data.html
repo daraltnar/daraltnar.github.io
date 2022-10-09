@@ -1,1 +1,106 @@
+<!DOCTYPE html>
+<head>
+<title>Data</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="daralt.css">
+</head>
+<body>
 
+<div class="header">
+  <h1>- DATA -</h1>
+  <p></p>
+</div>
+ 
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="advice.html">Advice</a>
+  <a href="index.html">Data</a>
+</div>
+<br>
+<br>
+  
+ <div class="main">
+ 
+  <div class="row">
+     
+  <div class="column">
+    <div class="card">
+      <img src="krupnejshie-strany-po-ploshhadi.png" style="width:100%">
+      <div class="container">
+        <h2>Largest countries in the world (by area)</h2>
+        <p class="title">In square kilometers.</p>
+        <p><button class="button"><a href="krupnejshie-strany-po-ploshhadi.png">Подробнее</a></button></p>
+      </div>
+    </div>
+   </div>
+       
+</div>   
+</div> 
+ 
+<style>
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+</style>  
+</div>
+
+<div class="footer">
+  <p>© Все права защищены. Любое использование материалов должно сопровождаться ссылкой на источник.</p>
+  <p> Вся размещенная на сайте информация предоставлена для ознакомления. Сайт не несет ответственность за использование этой информации посетителями сайта и принятых или непринятых ими решений. Вся ответственность за содержание комментариев и отзывов пользователей возлагается на их авторов.</p>
+</div>
+
+</body>
+</html>
